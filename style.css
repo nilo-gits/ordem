@@ -1,0 +1,105 @@
+header {
+    background-color: #1a1a1a;
+    color: #eeeeff;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 72px;
+    padding: 0px;
+    gap: 20px;
+   
+    height: 20vh;
+    margin-top: 0px;
+
+   
+  position: relative;
+  z-index: 10;
+
+
+
+    /* Sombra vermelha escura nas laterais */
+}
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+#chapéu {
+    height: 280px; /* Deixa a imagem proporcional à altura da fonte */
+    width: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+main {
+    background-color: #1a1a1a;
+    color: #eeeeff;
+    display: flex;
+    flex-direction: row;       /* mantém horizontal */
+    justify-content: space-between; /* texto esquerda, imagem direita */
+    align-items: flex-start;   /* alinha topo */
+    height: 80vh;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    gap: 40px;                 /* espaço entre texto e imagem */
+    padding: 20px;             /* espaçamento interno */
+}
+
+#texto {
+    max-width: 600px;
+    flex-shrink: 0;  /* não deixar encolher */
+    margin-left: 100px;
+}
+p {
+    width: 100%;       /* usa 100% da largura do container */
+    margin-left: 0;    /* remove margem esquerda */
+    font-size: 25px;
+}
+
+#ordem {
+    margin-top: 100px;
+    width: 700px;
+    height: auto;
+     /* mantém a imagem inteira visível */
+    flex-shrink: 0;
+    margin-right: 200px;
+
+    /* sombra apenas nas laterais esquerda e direita */
+    
+         border-radius: 2px;
+         border: solid #eeeeff;
+}
+
+#conteudo {
+  margin-left: 200px;
+  margin-right: 200px;
+  box-shadow: 
+    -30px 0 40px rgb(208,61,51, 0.6),  
+    30px 0 40px rgb(208,61,51, 0.6);
+  background-color: #1a1a1a;
+  padding: 0%;
+  border: 0%;
+}
+
+
+
+hr{
+    background-color: #d03d33;
+    width: 100%;}
+    h1{
+        text-align: center;
+    }
+p {
+    width: 450px;
+    margin-left: 40px;
+    font-size: 25px;
+}
