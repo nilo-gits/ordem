@@ -103,3 +103,63 @@ p {
     margin-left: 40px;
     font-size: 25px;
 }
+/* Versão Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    font-size: 48px;
+    padding: 20px;
+  }
+
+  #chapéu {
+    height: 160px;
+    margin-top: 10px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  #texto {
+    margin: 0;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  p {
+    width: 100%;
+    margin-left: 0;
+    font-size: 18px;
+  }
+
+  #ordem {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin-right: 0;
+  }
+
+  #conteudo {
+    margin: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  hr {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
