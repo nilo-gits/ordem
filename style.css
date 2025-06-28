@@ -16,33 +16,34 @@ header {
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  object-fit: fill;
   z-index: -1;
 }
 #chapéu {
     height: 280px; /* Deixa a imagem proporcional à altura da fonte */
     width: auto;
 }
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+ 
 }
+
+/* Remove o height fixo para evitar corte do conteúdo */
 main {
-    background-color: #1a1a1a;
+   
     color: #eeeeff;
     display: flex;
-    flex-direction: row;       /* mantém horizontal */
-    justify-content: space-between; /* texto esquerda, imagem direita */
-    align-items: flex-start;   /* alinha topo */
-    height: 80vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     font-size: 20px;
     position: relative;
     z-index: 1;
-    gap: 40px;                 /* espaço entre texto e imagem */
-    padding: 20px;             /* espaçamento interno */
+    gap: 40px;
+    padding: 20px;
+    flex-wrap: wrap;           /* Garante quebra no mobile */
 }
 
 #texto {
@@ -71,14 +72,14 @@ p {
 }
 
 #conteudo {
+  background-color: #1a1a1a;
   margin-left: 200px;
   margin-right: 200px;
+  padding: 0;
   box-shadow: 
-    -30px 0 40px rgb(208,61,51, 0.6),  
-    30px 0 40px rgb(208,61,51, 0.6);
-  background-color: #1a1a1a;
-  padding: 0%;
-  border: 0%;
+    -30px 0 40px rgba(238, 238, 255, 0.6),  
+     30px 0 40px rgba(238, 238, 255, 0.6);
+  min-height: 100vh; /* cobre tela inteira se necessário */
 }
 
 
@@ -206,4 +207,54 @@ p {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+#mano {
+    background-color: #1a1a1a;
+    color: #eeeeff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    gap: 40px;
+    padding: 20px;
+    flex-wrap: wrap;
+    min-height: 100vh; /* remove height: 80vh! */
+}
+
+#textoc {
+    max-width: 600px;
+    flex-shrink: 0;
+    margin-left: 40px;
+}
+
+#imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-right: 40px;
+}
+
+.imagem-role {
+    width: 400px;
+    border-radius: 2px;
+    border: solid #eeeeff;
+}
+@media (max-width: 768px) {
+  #mano {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #textoc, #imagens {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .imagem-role {
+    width: 90%;
+    max-width: 400px;
+  }
 }
